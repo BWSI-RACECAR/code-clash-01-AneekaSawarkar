@@ -38,21 +38,21 @@ class Solution:
 
         if len(s) <= 6:
             return False
+        else: 
+            while start < end:
+                if s[start] == " ":
+                    start = start + 1
 
-        while start < end:
-            if s[start] == " ":
-                start = start + 1
+                if s[end] == " ":
+                    end = end - 1
 
-            if s[end] == " ":
-                end = end - 1
+                if s[start] != s[end]:
+                    return False
 
-            if s[start] != s[end]:
-                return False
-
-            start += 1
-            end -= 1
+                start += 1
+                end -= 1
         
-        return True
+            return True
 
 def main():
     tc1 = Solution()
