@@ -33,6 +33,8 @@ class Solution:
         
         # TODO: Write code below to return a bool with the solution to the prompt
 
+        s = s.strip()
+
         start = 0
         end = len(s) - 1
 
