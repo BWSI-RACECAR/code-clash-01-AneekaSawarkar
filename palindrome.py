@@ -33,20 +33,13 @@ class Solution:
         
         # TODO: Write code below to return a bool with the solution to the prompt
 
-        s = s.strip()
-
         start = 0
         end = len(s) - 1
 
-        if len(s) <= 6:
-            return False
-        else: 
+        print(len(s))
+        if len(s) > 6:
             while start < end:
-                if s[start] == " ":
-                    start = start + 1
-
-                if s[end] == " ":
-                    end = end - 1
+              
 
                 if s[start] != s[end]:
                     return False
@@ -55,6 +48,9 @@ class Solution:
                 end -= 1
         
             return True
+
+        else:
+            return False
 
 def main():
     tc1 = Solution()
